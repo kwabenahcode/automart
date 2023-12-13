@@ -5,4 +5,7 @@ from django.contrib.auth.models import User
 #help to delete the profile once the user model is deleted 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    photo = models.ImageField(null=True)
+    bio = models.CharField(max_length=140, blank=True)
+    phone_number = models.CharField(max_length=13, blank=True)
     
