@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User 
 
+
+
+class Locations(models.Model):
+    address_1 = models.CharField(max_length=128)
+    address_2 = models.CharField(max_length=128, blank=True)
+    city = models.CharField(max_length=64)
+    
 #The profile model below is linked to the user model. The cascade function inherited,
 #help to delete the profile once the user model is deleted 
 class Profile(models.Model):
