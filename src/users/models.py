@@ -1,12 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User 
 
+from localflavor.gh.models import GHRegionField
+
 
 
 class Locations(models.Model):
-    address_1 = models.CharField(max_length=128)
+    address_1 = models.CharField(max_length=128, blank=True)
     address_2 = models.CharField(max_length=128, blank=True)
     city = models.CharField(max_length=64)
+    region = GHRegionField(default='GR')
     
 #The profile model below is linked to the user model. The cascade function inherited,
 #help to delete the profile once the user model is deleted 
