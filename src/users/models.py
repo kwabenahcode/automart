@@ -13,7 +13,7 @@ class User(AbstractUser):
     city = models.CharField(max_length=64,blank=True,null=True)
     region = GHRegionField(default='GR')
     zip_code = USZipCodeField(blank=True,null=True)
-    photo = models.ImageField(upload_to=user_photo_directory_path,null=True, blank=True)
+    photo = models.ImageField(upload_to=user_photo_directory_path, null=True, blank=True)
     bio = models.CharField(max_length=140, blank=True,null=True)
     phone_number = models.CharField(max_length=13, blank=True, null=True)
     
