@@ -123,6 +123,8 @@ STATIC_URL = 'static/'
 # Media root (to save the uploaded photos or files)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
