@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
-from http.client import HTTPResponse
+from django.http import HttpResponse
 from .models import User
 from django.contrib import messages
 
 def login_view(request):
-    return HTTPResponse('Login View: ')
+    return HttpResponse('Login View: ')
 
 def user_registration(request):
     if request.method == "POST":
