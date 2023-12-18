@@ -4,7 +4,7 @@ from .models import User
 from django.contrib import messages
 
 def login_view(request):
-    return HttpResponse('Login View: ')
+    return render(request, 'users/login.html')
 
 def user_registration(request):
     if request.method == "POST":
@@ -32,5 +32,5 @@ def user_registration(request):
         user.set_password(password)
         user.save()
         messages.success(request, f'Hello {first_name} you have successfully created an account')
-    return render(request, 'views/register.html')
+    return render(request, 'users/register.html')
 
