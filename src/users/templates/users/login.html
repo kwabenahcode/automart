@@ -13,7 +13,8 @@
         <main class="form-signin">
             <form action="" method="post">
                 <img class="mb-4" src="https://imgd.aeplcdn.com/642x336/n/cw/ec/41375/x6-exterior-right-front-three-quarter.jpeg?q=80" alt="" width="72" height="72" >
-                {{ my_formset|crispy }}
+                {% csrf_token %}
+                {{ login_form}}
                 <button class="w-100 btn btn-lg btn-danger" type="submit">Sign In</button>
                 <p class="mt-5 mb-3 text-muted">Copyright © 2022 AutoMax</p>
             </form>
