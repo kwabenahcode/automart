@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'localflavor',
     'main',
     'users',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#Crispy settings
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # Media root (to save the uploaded photos or files)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -137,3 +141,5 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     50:'critical',
 }
+
+
